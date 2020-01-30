@@ -1,4 +1,3 @@
-setwd("C:/Users/Sebastian/Documents/UEICEE/PISA")
 library(data.table)
 library(foreign)
 library(openxlsx)
