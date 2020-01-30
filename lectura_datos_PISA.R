@@ -1,7 +1,6 @@
 library(data.table)
 library(foreign)
 library(openxlsx)
-library(expss)
 
 #Cargo archivo con años y ubicaciones de los datos a levantar
 archivos=read.table(
