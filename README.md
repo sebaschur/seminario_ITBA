@@ -14,4 +14,5 @@ Archivos de la entrega del seminario
 3. Abrir y ejecutar el script de R "lectura_datos_PISA.R". Instalar las librerias que se requieran (data.table, foreign y openxlsx).
 El script va a leer los archivos .sav (SPSS), seleccionar algunas variables y armar archivos .csv de cada ciclo para cargar en Postgres.
 
-4. Copiar los archivos .csv a la carpeta de Jupyter Notebooks del entorno Spark, junto con el archivo "Script PISA Python.ipynb". Correr el script. Va a leer los archivos y cargarlos en la base de datos de Postgres.
+4. Copiar los archivos .csv a la carpeta de Jupyter Notebooks del entorno Spark, junto con el archivo "Script PISA Python.ipynb". Correr el script. Va a leer los archivos y cargarlos en la base de datos de Postgres. Si en la carpeta hay otros archivos .csv, guardar todo en una subcarpeta. El script y los CSV deben estar juntos.
+
