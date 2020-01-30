@@ -43,12 +43,13 @@ for(x in 1:nrow(archivos)){
 #Intengro todo en una base unica, corrijo cosas, agrego etiquetas y datos adicionales
 rm(df)
 datos2015B=datos2015B[cnt=="ARG",]
+datos2018=datos2018[cnt!="VNM",] #Quito los datos de Vietnam que están vacios respecto de los resultados.
 datos_comp=rbind(datos2012,datos2015A,datos2015B,datos2018)
 datos_comp[oecd==2,oecd:=0] #Corrijo valores en columna 'oecd'
 datos_comp=codebook_subn[datos_comp,on="subnation"] #agrego etiquetas de 'subnation'
 datos_comp=codebook_cnt[datos_comp,on="cnt"] #agrego datos referidos a los paises
 
-#Exporto los datos a un .csv
+#Exporto los datos archivos .csv de cada año (de otro modo es demasiado grande para cargarlo todo junto desde Python)
 for(x in unique(datos_comp$cyc)){
   write.csv(datos_comp[cyc==x,],paste0("datos",x,".csv"),row.names = FALSE,fileEncoding = "UTF8")
 }
